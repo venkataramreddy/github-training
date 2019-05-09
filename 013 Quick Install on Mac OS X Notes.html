@@ -1,0 +1,271 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>013 Quick Install on Mac OS X Notes</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><h4>Introduction</h4>
+
+<p>This document provides a quick listing of the tools needed and basic install instructions for each -- which is used throughout this course. Before you get started installing all the tools and software for this course, there are a few basic requirements. After that, I provide the -+general instructions foversr each tool used. Since this page is designed to aide the "get to the point" crowd, I keep my instructions as brief as possible.</p>
+
+
+
+<p>In order to support the most recent version of Mac OS X available, these instructions were tested using <strong>10.10</strong> or higher.</p>
+
+
+
+
+
+<h4>Getting Started and Common Tools</h4>
+
+
+
+<p><strong>Admin Rights</strong></p>
+
+
+
+<p>You need to have Administrator rights to your system. Most modern versions of Mac OS X come with several "flavors" of user accounts -- only Administrators can install software.</p>
+
+
+
+
+
+<p><strong>Security Tweaks</strong></p>
+
+
+
+<p>Modern versions of Mac OS X come with a default setting to disallow installation of software from unsigned applications or unknown third-parties. If you experience problems installing software, you may need to allow the most liberal setting for installing software from within <strong>System Preferences &gt; Security &amp; Privacy</strong>.</p>
+
+
+
+
+
+<p><strong>Google Chrome</strong></p>
+
+
+
+<p><strong>Optional.</strong></p>
+
+
+
+
+
+<p>I use Google Chrome for most of my courses. A few years ago, I would have strongly recommended or border-lined required the use of Chrome. However, most modern versions of all common browsers are adequate -- although the software engineer in me still prefers Chrome. For those wanting to follow along as closely as possible, install and use Chrome during this course. However, this is an <em>optional</em> step now, but I include it for completeness.</p>
+
+
+
+
+
+<h4>Install for Mac OS X</h4>
+
+
+
+
+
+<ul>
+<li>Go to the <a href="[https://www.google.com/chrome/browser/desktop](https://www.google.com/chrome/browser/desktop" rel="nofollow" target="_blank" title='Google Chrome Desktop"'>Google Chrome Desktop</a> page at <a href="[https://www.google.com/chrome/browser/desktop](https://www.google.com/chrome/browser/desktop" rel="nofollow" target="_blank" title='Google Chrome Desktop"'>https://www.google.com/chrome/browser/desktop</a></li><li>Click on the <strong>Download Chrome</strong> button</li><li>Accept the <em>Terms of Service</em> agreement (after reading, of course)</li><li>Follow the instructions through the install process</li></ul>
+
+
+
+
+
+<h4>Git (from Apple)</h4>
+
+
+
+<p><strong>Required.</strong></p>
+
+
+
+
+
+<p>Git is the source control tool used in this course. Apple provides Git with Xcode, but it is also available via the Developer Command Line Tools by Apple.</p>
+
+
+
+
+
+<p><strong>Install</strong></p>
+
+
+
+<p>Open Terminal and type:</p>
+
+
+
+
+
+<pre>git version<br></pre>
+
+
+
+
+
+
+
+<p>If Git responds with a version number, then Git is already installed. Otherwise, Mac OS will prompt for the installation of the Command Line Tools or Xcode. Either is fine, but choose Command Line Tools for a much faster download and install.</p>
+
+
+
+
+
+<p><strong>Configure Git</strong></p>
+
+
+
+<p>Git requires your name and email address before any real work can be done. It is best to just configure Git from the start.</p>
+
+
+
+
+
+<pre>git config --global user.name "Your Name"
+git config --global user.email "your.email@your-place.com"<br></pre>
+
+
+
+
+
+
+
+<h4>TextMate 2</h4>
+
+
+
+<p><strong>Optional.</strong></p>
+
+
+
+
+
+<p>Mac OS comes with a text editor called <strong>TextEdit</strong>, but it isn't very powerful and many IT professionals prefer something more. I use a free program called <strong>TextMate 2</strong> for most of my Mac based courses. If you are happy with TextEdit, then this step is <em>optional</em>.</p>
+
+
+
+
+
+<p><strong>Install</strong></p>
+
+
+
+<ul>
+<li><a href="[http://macromates.com/download](http://macromates.com/download" rel="nofollow" target="_blank" title='TextMate Download Page"'>Download TextMate 2</a> from <a href="[http://macromates.com/download](http://macromates.com/download" rel="nofollow" target="_blank" title='TextMate Download Page"'>http://macromates.com/download</a></li><li>Expand the archive and copy the TextMate app into the <em>Applications</em> stack</li><li>Open TextMate from the <em>Applications</em> stack</li></ul>
+
+
+
+
+
+<p><strong>Terminal Configuration</strong></p>
+
+
+
+<p>With TextMate 2 open:</p>
+
+
+
+
+
+<ul>
+<li>Go to Preferences</li><li>Go to the Terminal Tab</li><li>Click the <em>Install</em> button to setup the <code>mate</code> command</li></ul>
+
+
+
+
+
+<p><strong>Git Integration</strong></p>
+
+
+
+<p>Open Terminal and issue the command:</p>
+
+
+
+
+
+<pre>git config core.editor "mate -w"<br></pre>
+
+
+
+
+
+
+
+<p>Then test it out by:</p>
+
+
+
+
+
+<pre>git config --global -e<br></pre>
+
+
+
+
+
+
+
+<h4>P4Merge on Mac</h4>
+
+
+
+<p><em>P4Merge for Mac</em> is a visual comparsion and merge resolution tool that integrates well with Git.</p>
+
+
+
+
+
+<p><strong>Install</strong></p>
+
+
+
+<ul>
+<li><a href="[https://www.perforce.com/downloads/helix#clients](https://www.perforce.com/downloads/helix#clients" rel="nofollow" target="_blank" title='Perforce Client Download Page"'>Download P4Merge: Visual Merge Client</a> from <a href="[https://www.perforce.com/downloads/helix#clients](https://www.perforce.com/downloads/helix#clients" rel="nofollow" target="_blank" title='Perforce Client Download Page"'>https://www.perforce.com/downloads/helix#clients</a></li><li>Once the installer image has finished downloading, open the image volume.</li><li>Run only the P4V client</li></ul>
+
+
+
+
+
+<p><strong>Git Integration</strong></p>
+
+
+
+<p>Now, let's integrate P4Merge with Git. You'll need to know where P4Merge is installed on your system -- which is normally under <em>/Applications</em>. With the next series of commands, you may need to modify them slightly to fit your system.</p>
+
+
+
+
+
+<p>Configure P4Merge as <strong>Diff Tool</strong> in Git:</p>
+
+
+
+
+
+<pre>git config --global diff.tool p4merge
+git config --global difftool.p4merge.path "/Applications/p4merge.app/Contents/MacOS/p4merge"
+git config --global difftool.prompt false<br></pre>
+
+
+
+
+
+
+
+<p>Configure P4Merge as <strong>Merge Tool</strong> in Git:</p>
+
+
+
+
+
+<pre>git config --global merge.tool p4merge
+git config --global mergetool.p4merge.path "/Applications/p4merge.app/Contents/MacOS/p4merge"
+git config --global mergetool.prompt false</pre></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>
